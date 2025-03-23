@@ -27,10 +27,9 @@ url: "" # the base hostname & protocol for your site, e.g. https://bradyghills.g
 twitter_username: jekyllrb
 github_username:  bradyghills
 # Build settings
-theme: minima
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
