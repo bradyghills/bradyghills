@@ -1,0 +1,44 @@
+.content {
+    max-width: 700px;
+    margin-left: 100px; /* Push it a bit off-center */
+    padding: 20px;
+    border-left: 3px solid #000000; /* Gives a document-style feel */
+}
+
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+@keyframes colorFade {
+    0% { color: #eae600; } /* Blue Violet */
+    33% { color: #df0000; } /* Purple */
+    66% { color: #0058e5; } /* Dark Orchid */
+    100% { color: #eae600; } /* Blue Violet */
+}
+
+h1 {
+    font-size: 4rem; /* Larger title */
+    font-weight: bold;
+    text-align: left;
+    animation: colorFade 20s linear infinite;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 0;
+}

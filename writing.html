@@ -1,24 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Writing
+---
+
+<style>
+  /* Keep default font for navbar and other layout elements */
+  nav, .navbar {
+    font-family: inherit;
+  }
+
+  /* Specifically target the writing section body */
+  h1,
+  .writing-container, 
+  .search-bar, 
+  .writing-card, 
+  .writing-title, 
+  .writing-meta {
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    text-align: left;
+  }
+  h1 {
+    font-size: 2em;
+    margin: 20px 0;
+  }
+  .writing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+  }
+  .writing-card {
+    background: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+  }
+  .writing-card:hover {
+    transform: scale(1.02);
+    background: #e0e0e0;
+  }
+  .writing-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .writing-meta {
+    font-size: 0.9em;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  .search-bar {
+    margin: 20px 0;
+  }
+  .search-bar select, .search-bar input {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+  }
+  .year-selector, .month-selector {
+    display: inline-block;
+    margin: 0 10px;
+  }
+</style>
+
+<h1>thoughts</h1>
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search by title..." onkeyup="filterWritings()">
+</div>
+
+<div class="search-bar">
+  <input type="date" id="dateInput" onchange="filterByDate()">
+</div>
+
+<div class="search-bar">
+  <div class="year-selector">
+    <label for="yearFilter">Filter by Year:</label>
+    <select id="yearFilter" onchange="filterByYear()">
+      <option value="">All Years</option>
+      {% for writing in site.writings %}
+        {% assign year = writing.date | date: "%Y" %}
+        <option value="{{ year }}">{{ year }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  
+  <div class="month-selector">
+    <label for="monthFilter">Filter by Month:</label>
+    <select id="monthFilter" onchange="filterByMonth()">
+      <option value="">All Months</option>
+      <option value="01">January</option>
+      <option value="02">February</option>
+      <option value="03">March</option>
+      <option value="04">April</option>
+      <option value="05">May</option>
+      <option value="06">June</option>
+      <option value="07">July</option>
+      <option value="08">August</option>
+      <option value="09">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select>
+  </div>
+</div>
+
+<div class="writing-container" id="writingList">
+  {% for writing in site.writings %}
+  <div class="writing-card" data-title="{{ writing.title }}" data-date="{{ writing.date }}" data-year="{{ writing.date | date: '%Y' }}" data-month="{{ writing.date | date: '%m' }}">
+    <div class="writing-title">
+      <a href="{{ writing.url }}">{{ writing.title }}</a>
+    </div>
+    <div class="writing-meta">{{ writing.date | date: "%B %d, %Y" }} - {{ writing.category }}</div>
+    <p>{{ writing.excerpt | truncatewords: 20 }}</p>
+  </div>
+  {% endfor %}
+</div>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writing - My Digital Garden</title>
+    <title>digitalgarden</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1>Writing</h1>
-    <p>Essays, thoughts, and blog posts.</p>
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="assets/media/video/Sequence 02.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="audio.html">Audio</a></li>
-            <li><a href="visual.html">Visual</a></li>
-        </ul>
-    </nav>
+<script>
+  function filterWritings() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let writings = document.querySelectorAll(".writing-card");
+    writings.forEach(card => {
+      let title = card.getAttribute("data-title").toLowerCase();
+      card.style.display = title.includes(input) ? "block" : "none";
+    });
+  }
 
-    <footer>
-        <p>© 2025 by Brady Hill</p>
-    </footer>
-</body>
-</html>
+  function filterByDate() {
+    let dateInput = document.getElementById("dateInput").value;
+    let writings = document.querySelectorAll(".writing-card");
+    writings.forEach(card => {
+      let writingDate = card.getAttribute("data-date").split("T")[0];
+      card.style.display = writingDate === dateInput ? "block" : "none";
+    });
+  }
+
+  function filterByYear() {
+    let selectedYear = document.getElementById("yearFilter").value;
+    let writings = document.querySelectorAll(".writing-card");
+    writings.forEach(card => {
+      let year = card.getAttribute("data-year");
+      card.style.display = (selectedYear === "" || year === selectedYear) ? "block" : "none";
+    });
+  }
+
+  function filterByMonth() {
+    let selectedMonth = document.getElementById("monthFilter").value;
+    let writings = document.querySelectorAll(".writing-card");
+    writings.forEach(card => {
+      let month = card.getAttribute("data-month");
+      card.style.display = (selectedMonth === "" || month === selectedMonth) ? "block" : "none";
+    });
+  }
+</script>
