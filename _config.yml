@@ -38,9 +38,9 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: trip_logs
+      type: trip-logs
     values:
-      layout: trip_log
+      layout: trip-log
 
 data_source: "outdoors/data"
 
