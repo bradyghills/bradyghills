@@ -9,13 +9,12 @@
     "difficulty": "Strenuous",
     "distance": "18 miles",
     "elevation": "9,000 ft gain"
+  },
+  {
+    "id": "lakeesther2",
+    "title": "Lake Esther Adventure",
+    "date": "2023-06-15",
+    "thumbnail": "/outdoors/photos/esther1.jpg",
+    "url": "/outdoors/trip-logs/lakeesther"
   }
-  [
-    {
-      "title": "Lake Esther Adventure",
-      "date": "2023-06-15",
-      "thumbnail": "/outdoors/photos/esther1.jpg",
-      "url": "/outdoors/trip-logs/lakeesther"
-    }
-  ]
 ]
