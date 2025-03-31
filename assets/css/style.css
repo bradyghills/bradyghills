@@ -1,79 +1,85 @@
-/* Ensure no default margins/padding */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: visible; /* Allow overflow, so navbar doesn't get clipped */
-}
-
-/* Video Background */
-.video-background {
-    position: fixed; /* Fixes video position */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Puts the video behind the content */
-}
-
-.video-background video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%; /* Make sure the video stretches */
-    height: 100%; /* Make sure the video stretches */
-    object-fit: cover; /* Ensures the video covers the entire page */
-}
-
-/* Text on the Right */
-.content {
-    position: absolute; /* Change to absolute positioning */
-    z-index: 1; /* Ensures content is on top of the video */
-    font-family: 'helvetica', Arial, Helvetica, sans-serif; /* Helvetica font */
-    color: black; /* Black text color */
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Light shadow to stand out */
-    padding: 20px;
-    top: 100px; /* Adds space from the top */
-}
-
-/* General Styles */
+/* This is the navbar section */
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Helvetica', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
-/* Toolbar Styles */
-.toolbar {
-    position: relative; /* Ensure navbar stays on top */
-    top: 0; /* Adjust the distance from the top */
-    left: 0; /* Align to the left */
+.navbar {
+    background-color: #ffffff;
     width: 100%;
-    z-index: 1000; /* Ensures toolbar is on top */
-    display: flex; /* Align items horizontally */
-    justify-content: flex-start; /* Align links to the left */
-    padding: 20px 10px; /* Increased padding for better visibility */
-    box-sizing: border-box;
+    padding: 10px 0;
 }
 
-.toolbar a {
-    padding: 10px;
-    color: black;
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-menu li {
+    position: relative;
+}
+
+.navbar-menu a {
+    color: #000000;
     text-decoration: none;
-    font-size: 30px;
-    margin-right: 20px;
-    display: inline-block;
+    padding: 10px 15px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px; /* Increased text size */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Dropdown Content */
-.visual-dropdown {
-    position: relative; /* Ensure dropdown content positions relative to this */
+.navbar-menu a:hover,
+.navbar-menu .dropdown:hover > a {
+    color: rgb(89, 17, 94);
 }
 
-/* Adjustments for Proper Alignment */
-.toolbar a {
-    margin-bottom: 0;
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    width: auto
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 5s ease, transform 5s ease;
 }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0)
+}
+
+.dropdown-menu li a {
+    padding: 5px 10px;
+    color: #000000;
+    text-align: left;
+    font-size: 20px; /* Increased text size for dropdown items */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #156100;
+    color: rgb(255, 255, 255);
+}
+/* end of navbar section*/

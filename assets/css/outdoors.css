@@ -1,0 +1,155 @@
+/* Outdoors Page Styles */
+
+.outdoors-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .section {
+    margin-bottom: 60px;
+  }
+  
+  .section-title {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #3c8a51;
+  }
+  
+  /* Trip Logs Section */
+  .trip-logs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .trip-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .trip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .trip-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .trip-thumbnail {
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .trip-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .trip-info {
+    padding: 15px;
+  }
+  
+  .trip-date {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
+  .trip-summary {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+  
+  /* Photo Gallery Section */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-image {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover .gallery-image img {
+    transform: scale(1.05);
+  }
+  
+  .gallery-caption {
+    padding: 12px;
+    background-color: #fff;
+  }
+  
+  .photo-date {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Bucket List Section */
+  .bucket-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+  
+  .bucket-list-item {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .bucket-list-item:hover {
+    transform: translateY(-3px);
+  }
+  
+  .bucket-list-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #3c8a51;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .trip-logs-grid,
+    .gallery-grid,
+    .bucket-list {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .trip-logs-grid,
+    .gallery-grid,
+    .bucket-list {
+      grid-template-columns: 1fr;
+    }
+  }

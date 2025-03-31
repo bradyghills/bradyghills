@@ -1,0 +1,20 @@
+[
+    {
+        "filename": "grizzly.png",
+        "title": "Grizzly",
+        "description": "This is drawing 1.",
+        "date": "2025-03-01"
+    },
+    {
+        "filename": "waterbuff.png",
+        "title": "Drawing 2",
+        "description": "This is drawing 2.",
+        "date": "2025-03-05"
+    },
+    {
+        "filename": "rhino.png",
+        "title": "RHINO",
+        "description": "here is a mother and baby rhino that I drew.",
+        "date": "2025-03-15"
+    }
+]
