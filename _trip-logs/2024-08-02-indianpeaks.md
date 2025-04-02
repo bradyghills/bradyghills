@@ -8,27 +8,27 @@ titleimage: "/outdoors/photos/arapaho11.JPG"
 location: "Indian Peaks Wilderness, Colorado"
 permalink: /outdoors/trip-logs/2024-08-02-indianpeaks
 images:
-  - /outdoors/photos/arapaho1.jpg
-  - /outdoors/photos/arapaho2.jpg
-  - /outdoors/photos/arapaho3.jpg
-  - /outdoors/photos/arapaho4.jpg
-  - /outdoors/photos/arapaho5.jpg
-  - /outdoors/photos/arapaho6.jpg
-  - /outdoors/photos/arapaho7.jpg
-  - /outdoors/photos/arapaho8.jpg
-  - /outdoors/photos/arapaho9.jpg
-  - /outdoors/photos/arapaho10.jpg
-  - /outdoors/photos/arapaho11.jpg
-  - /outdoors/photos/arapaho12.jpg
-  - /outdoors/photos/arapaho13.jpg
-  - /outdoors/photos/arapaho14.jpg
-  - /outdoors/photos/arapaho15.jpg
-  - /outdoors/photos/arapaho16.jpg
-  - /outdoors/photos/arapaho17.jpg
-  - /outdoors/photos/arapaho18.jpg
-  - /outdoors/photos/arapaho19.jpg
-  - /outdoors/photos/arapaho20.jpg
-  - /outdoors/photos/arapaho21.jpg
+  - /outdoors/photos/arapaho1.JPG
+  - /outdoors/photos/arapaho2.JPG
+  - /outdoors/photos/arapaho3.JPG
+  - /outdoors/photos/arapaho4.JPG
+  - /outdoors/photos/arapaho5.JPG
+  - /outdoors/photos/arapaho6.JPG
+  - /outdoors/photos/arapaho7.JPG
+  - /outdoors/photos/arapaho8.JPG
+  - /outdoors/photos/arapaho9.JPG
+  - /outdoors/photos/arapaho10.JPG
+  - /outdoors/photos/arapaho11.JPG
+  - /outdoors/photos/arapaho12.JPG
+  - /outdoors/photos/arapaho13.JPG
+  - /outdoors/photos/arapaho14.JPG
+  - /outdoors/photos/arapaho15.JPG
+  - /outdoors/photos/arapaho16.JPG
+  - /outdoors/photos/arapaho17.JPG
+  - /outdoors/photos/arapaho18.JPG
+  - /outdoors/photos/arapaho19.JPG
+  - /outdoors/photos/arapaho20.JPG
+  - /outdoors/photos/arapaho21.JPG
 ---
 
 # Intro
@@ -52,7 +52,7 @@ We began hiking around 7 am. It was still not very light out and chilly, but bot
 The entire way up to the sort of basin/pass area, I don't know what to call it, was 3.3 miles. After you pass the fourth of july mine, the trail becomes rocky and you get out of the trees. There's a really unique view to the left for the rest of the way up of the valley below. We made good time and once you are up it becomes a really unique landscape: sort of a rocky, flat field surrounded by the mountains around you. You can see that in some of the images. Like I said we were not summitting any of the surrounding mountains which was actually great, because we were high enough to be closer to their peaks, and able to see them from a different perspective. It was very sunny too, which made it all the better. When we got to the pass me and Matt went off to the scrambling bit and Evan sat and made friends with the mosquitos. 
 
 <br/><br/>
-<img src="/outdoors/photos/arapaho8.jpg" alt="photo" width="500"/>
+<img src="/outdoors/photos/arapaho8.JPG" alt="photo" width="500"/>
 <br/><br/>
 
 # Scrambling
