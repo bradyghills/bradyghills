@@ -3,9 +3,9 @@ layout: default
 title: Outdoors
 ---
 
-<link rel="stylesheet" href="assets/css/outdoors.css">
-<script src="assets/js/lightbox.js"></script>
-<script src="assets/js/sort.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/outdoors.css">
+<script src="{{ site.baseurl }}/assets/js/lightbox.js"></script>
+<script src="{{ site.baseurl }}/assets/js/sort.js"></script>
 
 <div class="outdoors-page">
   <header class="page-header">
@@ -22,11 +22,11 @@ title: Outdoors
     </select>
     
     <div class="trip-logs-grid" id="trip-logs-grid">
-      {% for trip in site.data['trip-logs'] %}
+      {% for trip in site.trip-logs %}
         <div class="trip-card" data-date="{{ trip.date }}">
-          <a href="{{ trip.url }}">
+          <a href="{{ site.baseurl }}{{ trip.url }}">
             <div class="trip-thumbnail">
-              <img src="{{ trip.thumbnail }}" alt="{{ trip.title }}">
+              <img src="{{ site.baseurl }}{{ trip.thumbnail }}" alt="{{ trip.title }}">
             </div>
             <div class="trip-info">
               <p class="trip-date">{{ trip.date }}</p>
@@ -36,7 +36,7 @@ title: Outdoors
           </a>
         </div>
       {% endfor %}
-      {% if site.data['trip-logs'].size == 0 %}
+      {% if site.trip-logs.size == 0 %}
         <p>No trip logs found.</p>
       {% endif %}
     </div>
@@ -47,9 +47,9 @@ title: Outdoors
     <div class="gallery-grid" id="photo-gallery-grid">
       {% for photo in site.data.photos %}
         <div class="gallery-item">
-          <a href="outdoors/photos/{{ photo.filename }}" class="lightbox">
+          <a href="{{ site.baseurl }}/outdoors/photos/{{ photo.filename }}" class="lightbox">
             <div class="gallery-image">
-              <img src="outdoors/photos/{{ photo.filename }}" alt="{{ photo.caption }}">
+              <img src="{{ site.baseurl }}/outdoors/photos/{{ photo.filename }}" alt="{{ photo.caption }}">
             </div>
             <div class="gallery-caption">
               <p>{{ photo.caption }}</p>

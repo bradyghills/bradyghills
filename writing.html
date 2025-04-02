@@ -87,8 +87,9 @@ title: Writing
     <label for="yearFilter">Filter by Year:</label>
     <select id="yearFilter" onchange="filterByYear()">
       <option value="">All Years</option>
-      {% for writing in site.writings %}
-        {% assign year = writing.date | date: "%Y" %}
+      {% assign years = site.writings | map: "date" | uniq %}
+      {% for date in years %}
+        {% assign year = date | date: "%Y" %}
         <option value="{{ year }}">{{ year }}</option>
       {% endfor %}
     </select>
@@ -118,7 +119,7 @@ title: Writing
   {% for writing in site.writings %}
   <div class="writing-card" data-title="{{ writing.title }}" data-date="{{ writing.date }}" data-year="{{ writing.date | date: '%Y' }}" data-month="{{ writing.date | date: '%m' }}">
     <div class="writing-title">
-      <a href="{{ writing.url }}">{{ writing.title }}</a>
+      <a href="{{ site.baseurl }}{{ writing.url }}">{{ writing.title }}</a>
     </div>
     <div class="writing-meta">{{ writing.date | date: "%B %d, %Y" }} - {{ writing.category }}</div>
     <p>{{ writing.excerpt | truncatewords: 20 }}</p>
@@ -130,15 +131,8 @@ title: Writing
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>digitalgarden</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
-<body>
-    <div class="video-background">
-        <video autoplay muted loop playsinline>
-            <source src="" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
 
 <script>
   function filterWritings() {
