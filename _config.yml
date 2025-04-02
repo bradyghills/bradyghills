@@ -2,8 +2,11 @@ title: Brayden Hill
 email: braydenhill.bgh@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   The present is a gift, and I just want to be. 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://127.0.0.1:4000" # the base hostname & protocol for your site, e.g. https://bradyghills.github.io
+
+# Set up for GitHub Pages
+baseurl: "/bradyghills"  # Change this to match your repo name
+url: "https://bradyghills.github.io"  # Your GitHub Pages URL
+
 twitter_username: jekyllrb
 github_username: bradyghills
 
@@ -30,15 +33,16 @@ plugins:
   - jekyll-feed
 
 # Exclusions
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - _config_dev.yml  # Exclude the development config from GitHub Pages
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
