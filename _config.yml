@@ -13,12 +13,13 @@ github_username: bradyghills
 collections:
   writings:
     output: true
+    permalink: "{{ site.baseurl }}/writings/:name"
   trip-logs:
     output: true
-    permalink: /outdoors/trip-logs/:name
+    permalink: "{{ site.baseurl }}/outdoors/trip-logs/:name"
   travel-logs:
     output: true
-    permalink: /travel-logs/:name/
+    permalink: "{{ site.baseurl }}/travel-logs/:name/"
 
 # Default Front Matter to recognize custom fields
 defaults:
