@@ -3,52 +3,59 @@ layout: default
 title: Outdoors
 ---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>digitalgarden</title>
-    <link rel="stylesheet" href="assets/css/outdoors.css">
-</head>
+<link rel="stylesheet" href="assets/css/outdoors.css">
+<script src="assets/js/lightbox.js"></script>
+<script src="assets/js/sort.js"></script>
 
 <div class="outdoors-page">
   <header class="page-header">
-    <h1>My Outdoor Adventures</h1>
+    <h1>the great outdoors</h1>
   </header>
 
   <section id="trip-logs" class="section">
-    <h2 class="section-title">Trip Logs</h2>
-    <div class="trip-logs-grid">
-      {% for trip in site.data.trip-logs %}
-        <div class="trip-card">
+    <h2 class="section-title">TRIP LOGS</h2>
+
+    <label for="sort-order">sort by date:</label>
+    <select id="sort-order" onchange="sortTripLogs()">
+      <option value="newest">NEWEST TO OLDEST</option>
+      <option value="oldest">OLDEST TO NEWEST</option>
+    </select>
+    
+    <div class="trip-logs-grid" id="trip-logs-grid">
+      {% for trip in site.data['trip-logs'] %}
+        <div class="trip-card" data-date="{{ trip.date }}">
           <a href="{{ trip.url }}">
             <div class="trip-thumbnail">
               <img src="{{ trip.thumbnail }}" alt="{{ trip.title }}">
             </div>
             <div class="trip-info">
               <p class="trip-date">{{ trip.date }}</p>
-              <h3>{{ trip.title }}</h3>
+              <p>{{ trip.location }}</p>
+              <h1>{{ trip.title }}</h1>
             </div>
           </a>
         </div>
       {% endfor %}
-      {% if site.data.trip-logs.size == 0 %}
+      {% if site.data['trip-logs'].size == 0 %}
         <p>No trip logs found.</p>
       {% endif %}
     </div>
   </section>
 
   <section id="photo-gallery" class="section">
-    <h2 class="section-title">Photo Gallery</h2>
-    <div class="gallery-grid">
+    <h2 class="section-title">PHOTO GALLERY</h2>
+    <div class="gallery-grid" id="photo-gallery-grid">
       {% for photo in site.data.photos %}
         <div class="gallery-item">
-          <div class="gallery-image">
-            <img src="{{ photo.url }}" alt="{{ photo.caption }}">
-          </div>
-          <div class="gallery-caption">
-            <p>{{ photo.caption }}</p>
-            <p class="photo-date">{{ photo.date }}</p>
-          </div>
+          <a href="outdoors/photos/{{ photo.filename }}" class="lightbox">
+            <div class="gallery-image">
+              <img src="outdoors/photos/{{ photo.filename }}" alt="{{ photo.caption }}">
+            </div>
+            <div class="gallery-caption">
+              <p>{{ photo.caption }}</p>
+              <p class="photo-date">{{ photo.date }}</p>
+            </div>
+          </a>
         </div>
       {% endfor %}
       {% if site.data.photos.size == 0 %}
@@ -58,7 +65,7 @@ title: Outdoors
   </section>
 
   <section id="bucket-list" class="section">
-    <h2 class="section-title">Bucket List</h2>
+    <h2 class="section-title">BUCKET LIST</h2>
     <div class="bucket-list">
       {% for item in site.data['bucket-list'] %}
         <div class="bucket-list-item">
@@ -72,3 +79,16 @@ title: Outdoors
     </div>
   </section>
 </div>
+
+<script>
+// Function to shuffle photos
+function shufflePhotos() {
+  const gallery = document.getElementById('photo-gallery-grid');
+  for (let i = gallery.children.length; i >= 0; i--) {
+    gallery.appendChild(gallery.children[Math.random() * i | 0]);
+  }
+}
+
+// Shuffle photos on page load
+document.addEventListener('DOMContentLoaded', shufflePhotos);
+</script>

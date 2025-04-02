@@ -1,0 +1,53 @@
+---
+layout: default
+Title: Trip Log
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.excerpt | strip_html | default: site.description }}">
+    <meta name="keywords" content="trip log, adventure, {{ page.location }}">
+    <meta name="author" content="{{ site.author }}">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/triplog.css' | relative_url }}">
+</head>
+<body>
+    <header class="triplog-header" style="background-image: url('{{ page.titleimage | relative_url }}');">
+        <div class="overlay">
+            <h1 class="triplog-title">{{ page.title }}</h1>
+            <p class="triplog-meta">
+                <span class="triplog-date">{{ page.date | date: "%B %d, %Y" }}</span> | 
+                <span class="triplog-location">{{ page.location }}</span>
+            </p>
+        </div>
+    </header>
+    <main class="triplog-content">
+        <article>
+            {{ content }}
+        </article>
+        {% if page.images %}
+        <section class="triplog-gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-container">
+                <button class="carousel-arrow left-arrow">&lt;</button>
+                <div class="gallery-grid">
+                    {% for image in page.images %}
+                    <div class="gallery-item">
+                        <img src="{{ image | relative_url }}" alt="Gallery image from {{ page.title }}">
+                    </div>
+                    {% endfor %}
+                </div>
+                <button class="carousel-arrow right-arrow">&gt;</button>
+            </div>
+        </section>
+        {% endif %}
+    </main>
+    <script src="{{ '/assets/js/carousel.js' | relative_url }}"></script>
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-image" src="" alt="Expanded image">
+    </div>
+</body>
+</html>

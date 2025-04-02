@@ -1,0 +1,205 @@
+/* General Reset */
+body, h1, h2, p, ul, ol {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    background-color: #f9f9f9;
+}
+
+/* Header Section */
+.triplog-header {
+    position: relative;
+    background-size: cover; /* Ensure the image fully covers the header */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh; /* Increase height to show more of the image */
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #002301; /* Fallback color */
+}
+
+.triplog-header .overlay {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.triplog-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+}
+
+.triplog-meta {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+}
+
+/* Main Content */
+.triplog-content {
+    background: white;
+    padding: 100px;
+    margin: -50px auto 20px;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+.triplog-content article {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Gallery Section */
+.triplog-gallery {
+    margin-top: 20px;
+}
+
+.triplog-gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 5px; /* Uniform spacing between images */
+    padding: 10px; /* Padding around the entire gallery */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.gallery-grid::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
+}
+
+.gallery-item {
+    flex: 0 0 auto; /* Prevent items from shrinking or growing */
+    scroll-snap-align: center; /* Ensure items snap to the center */
+    margin: 0; /* Remove any default margin */
+}
+
+.gallery-item img {
+    height: 400px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Maintain aspect ratio while filling the height */
+    border-radius: 0; /* Ensure square corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
+    transition: transform 1s ease, box-shadow 1s ease;
+}
+
+.gallery-container {
+    position: relative; /* Set the container as the positioning context for the arrows */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .triplog-title {
+        font-size: 2rem;
+    }
+
+    .triplog-meta {
+        font-size: 0.9rem;
+    }
+
+    .triplog-content {
+        padding: 15px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed; /* Ensure it stays on top of the page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with transparency */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it appears above all other elements */
+}
+
+.lightbox img {
+    max-width: 90%; /* Ensure the image fits within the screen width */
+    max-height: 90%; /* Ensure the image fits within the screen height */
+    object-fit: contain; /* Maintain the aspect ratio */
+    border-radius: 0; /* Ensure square corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for aesthetics */
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10000; /* Ensure the close button is above the lightbox */
+}
+
+/* Carousel Arrow Styles */
+.carousel-arrow {
+    position: absolute; /* Position the arrows relative to the .gallery-container */
+    top: 50%; /* Center the arrows vertically within the container */
+    transform: translateY(-50%);
+    background-color: rgba(0, 78, 18, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10; /* Ensure arrows are above the gallery images */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-arrow.left-arrow {
+    left: 0; /* Position the left arrow at the left edge of the container */
+}
+
+.carousel-arrow.right-arrow {
+    right: 0; /* Position the right arrow at the right edge of the container */
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(52, 210, 0, 0.8); /* Darker background on hover */
+}

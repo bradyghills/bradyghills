@@ -1,0 +1,46 @@
+[
+  {
+    "id": "2024-06-30-esther",
+    "title": "backpacking to paradise",
+    "titleimage": "/outdoors/photos/mountainsky.JPG",
+    "date": "2024-06-30",
+    "thumbnail": "/outdoors/photos/esther1.jpg",
+    "summary": "A challenging three-day expedition attempting to summit Mount Rainier via the Disappointment Cleaver route.",
+    "location": "White River National Forest, Colorado",
+    "difficulty": "Strenuous",
+    "url": "/outdoors/trip-logs/2024-06-30-esther"
+  }, 
+  {
+    "id": "2024-05-30-moab",
+    "title": "moab",
+    "date": "2024-05-30",
+    "thumbnail": "/outdoors/photos/moab14.jpg",
+    "summary": "Moab with friends",
+    "location": "Moab, Utah",
+    "difficulty": "Mild",
+    "distance": "none",
+    "url": "/outdoors/trip-logs/2024-05-30-moab"
+  },
+  {
+"id": "2024-12-29-laplata",
+    "title": "la plata snow backpacking",
+    "date": "2024-12-29",
+    "thumbnail": "/outdoors/photos/laplatagear.jpg",
+    "summary": "One for the books",
+    "location": "San Isabel National Forest, Colorado",
+    "difficulty": "Intense",
+    "distance": "none",
+    "url": "/outdoors/trip-logs/2024-12-29-laplata"
+  },
+  {
+    "id": "2024-08-02-indianpeaks",
+        "title": "indian peaks",
+        "date": "2024-08-02",
+        "thumbnail": "/outdoors/photos/arapaho1.jpg",
+        "summary": "Hardo and Ewatty",
+        "location": "Indian Peaks Wilderness, Colorado",
+        "difficulty": "moderate",
+        "distance": "8 miles",
+        "url": "/outdoors/trip-logs/2024-08-02-indianpeaks"
+      }
+]
