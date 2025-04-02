@@ -3,6 +3,7 @@ layout: triplog
 title: "scrambling with hardo and evan"
 id: "2024-08-02-indianpeaks"
 date: 2024-08-02
+thumbnail: "/outdoors/photos/arapaho1.jpg"
 titleimage: "/outdoors/photos/arapaho11.JPG"
 location: "Indian Peaks Wilderness, Colorado"
 permalink: /outdoors/trip-logs/2024-08-02-indianpeaks

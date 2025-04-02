@@ -29,7 +29,7 @@ title: Outdoors
               <img src="{{ site.baseurl }}{{ trip.thumbnail }}" alt="{{ trip.title }}">
             </div>
             <div class="trip-info">
-              <p class="trip-date">{{ trip.date }}</p>
+              <p class="trip-date">{{ trip.date | date: "%B %d, %Y" }}</p>
               <p>{{ trip.location }}</p>
               <h1>{{ trip.title }}</h1>
             </div>
