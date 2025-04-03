@@ -1,0 +1,170 @@
+/* General Reset */
+body, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #110843, #001882); /* Gradient background */
+    overflow-x: hidden;
+}
+
+.portals {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+}
+
+.portal {
+    flex: 1; /* Each portal takes up one-third of the width */
+    height: 100%; /* Full height of the viewport */
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover effects */
+}
+
+.portal:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    filter: brightness(1.1); /* Brighten the image slightly */
+}
+
+.portal:active {
+    transform: scale(0.5); /* Slight shrink on click */
+}
+
+.ventures-container {
+    display: flex;
+    flex-direction: column; /* Stack header and cards vertically */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reduce gap between cards */
+    width: 95%; /* Cards container takes up 95% of the viewport width */
+    max-width: 1400px; /* Limit the maximum width for larger screens */
+}
+
+/* Individual Card Styling */
+.card {
+    flex: 1; /* Cards take equal space */
+    max-width: 450px; /* Increase the maximum width of each card */
+    aspect-ratio: 3 / 4; /* Maintain a 3:4 aspect ratio */
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Add a deeper shadow */
+}
+
+.card:active {
+    transform: scale(0.98); /* Slight shrink on click */
+}
+
+/* Card Content */
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Transparent Navbar for Ventures Page */
+.navbar {
+    background: transparent !important; /* Transparent navbar background */
+    box-shadow: none; /* Remove any shadow */
+}
+
+/* Navbar Links - Default State */
+.navbar a {
+    color: rgb(255, 255, 255); /* Default color for all navbar links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar-menu a:hover,
+.navbar-menu .dropdown:hover > a {
+    color: rgb(0, 36, 168);
+}
+
+/* Ventures Page Specific Styling */
+.navbar a[href*="ventures.html"] {
+    color: rgb(30, 0, 255); /* Red color for the Ventures link */
+    font-weight: bold; /* Make it stand out */
+}
+
+/* Ventures Link Hover State */
+.navbar a[href*="ventures.html"]:hover {
+    color: rgb(255, 255, 255); /* Keep it red on hover */
+}
+
+/* Header Section */
+.ventures-header {
+    text-align: center;
+    margin-bottom: 30px; /* Add spacing below the header */
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+}
+
+.ventures-header h1 {
+    font-size: 1.0rem; /* Large font size */
+    color: #fff; /* White text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a subtle shadow for contrast */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portal-label {
+        font-size: 1.5rem;
+    }
+
+    .cards {
+        flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+        gap: 15px;
+    }
+
+    .card {
+        max-width: 300px; /* Reduce card size for smaller screens */
+    }
+
+    .ventures-header h1 {
+        font-size: 2rem; /* Slightly smaller font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .portal-label {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        max-width: 100%; /* Cards take full width on very small screens */
+    }
+
+    .ventures-header h1 {
+        font-size: 1.5rem; /* Smaller font size for mobile devices */
+    }
+}

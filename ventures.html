@@ -2,3 +2,31 @@
 layout: default
 title: Ventures
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventures</title>
+    <link rel="stylesheet" href="{{ '/assets/css/ventures.css' | relative_url }}">
+</head>
+<body>
+    <div class="ventures-container">
+        <!-- Header Section -->
+        <header class="ventures-header">
+            <h1>my interactions with mother earth, various travels, and my evolution as a being</h1>
+        </header>
+        <!-- Cards Section -->
+        <div class="cards">
+            <!-- Outdoors Card -->
+            <div class="card" id="card-outdoors" data-link="outdoors.html" style="background-image: url('/assets/media/random/outdoors.jpg');"></div>
+            <!-- Travel Card -->
+            <div class="card" id="card-travel" data-link="travel.html" style="background-image: url('/assets/media/random/travel.jpg');"></div>
+            <!-- Goals Card -->
+            <div class="card" id="card-goals" data-link="goals.html" style="background-image: url('/assets/media/random/goals.jpg');"></div>
+        </div>
+    </div>
+    <script src="{{ '/assets/js/doors.js' | relative_url }}"></script>
+</body>
+</html>
+
