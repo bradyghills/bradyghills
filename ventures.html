@@ -8,7 +8,7 @@ title: Ventures
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventures</title>
-    <link rel="stylesheet" href="{{ '/assets/css/ventures.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ventures.css">
 </head>
 <body>
     <div class="ventures-container">
@@ -19,14 +19,14 @@ title: Ventures
         <!-- Cards Section -->
         <div class="cards">
             <!-- Outdoors Card -->
-            <div class="card" id="card-outdoors" data-link="outdoors.html" style="background-image: url('/assets/media/random/outdoors.jpg');"></div>
+            <div class="card" id="card-outdoors" data-link="outdoors.html" style="background-image: url('{{ site.baseurl }}/assets/media/random/outdoors.jpg');"></div>
             <!-- Travel Card -->
-            <div class="card" id="card-travel" data-link="travel.html" style="background-image: url('/assets/media/random/travel.jpg');"></div>
+            <div class="card" id="card-travel" data-link="travel.html" style="background-image: url('{{ site.baseurl }}/assets/media/random/travel.jpg');"></div>
             <!-- Goals Card -->
-            <div class="card" id="card-goals" data-link="goals.html" style="background-image: url('/assets/media/random/goals.jpg');"></div>
+            <div class="card" id="card-goals" data-link="goals.html" style="background-image: url('{{ site.baseurl }}/assets/media/random/goals.jpg');"></div>
         </div>
     </div>
-    <script src="{{ '/assets/js/doors.js' | relative_url }}"></script>
+    <script src="{{ site.baseurl }}/assets/js/doors.js"></script>
 </body>
 </html>
 
