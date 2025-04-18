@@ -40,11 +40,11 @@ This was a spur of the moment trip. Matt reached out to me the day before and as
 ---
 The Fourth of July trailhead is located at 39°59'42"N 105°38'03"W. It is a small lot that was relatively empty when we arrived. We took the Arapaho Pass Trail all the way to the Arapaho Pass. 
 
-<img src="/outdoors/other/Screenshot 2025-04-02 at 10.49.44 AM.png" alt="map" width="500"/>
+<img src="../other/Screenshot 2025-04-02 at 10.49.44 AM.png" alt="map" width="500"/>
 
 <br/><br/>
 
-<img src="/outdoors/other/Screenshot 2025-04-02 at 10.51.00 AM.png" alt="map" width="500"/>
+<img src="../other/Screenshot 2025-04-02 at 10.51.00 AM.png" alt="map" width="500"/>
 ---
 <br/><br/>
 We began hiking around 7 am. It was still not very light out and chilly, but both of those variables changed quickly as we started up. There was no rush really because we weren't summitting anything just enjoying the hike. There were a notable amount of little streams and babbling brooks to cross. As we hiked, we spotted a female moose as well from a distance. Having a camera was really great because we were able to capture a lot of good stills of the location. I think a lot of shots turned out cool, like the title card of this page or the thumbnail of this triplog. We took turns being the leader paving the way and setting the pace, being in the middle along for the ride, and having the camera snapping shots and lagging behind. 
@@ -52,7 +52,7 @@ We began hiking around 7 am. It was still not very light out and chilly, but bot
 The entire way up to the sort of basin/pass area, I don't know what to call it, was 3.3 miles. After you pass the fourth of july mine, the trail becomes rocky and you get out of the trees. There's a really unique view to the left for the rest of the way up of the valley below. We made good time and once you are up it becomes a really unique landscape: sort of a rocky, flat field surrounded by the mountains around you. You can see that in some of the images. Like I said we were not summitting any of the surrounding mountains which was actually great, because we were high enough to be closer to their peaks, and able to see them from a different perspective. It was very sunny too, which made it all the better. When we got to the pass me and Matt went off to the scrambling bit and Evan sat and made friends with the mosquitos. 
 
 <br/><br/>
-<img src="/outdoors/photos/arapaho8.JPG" alt="photo" width="500"/>
+<img src="../photos/arapaho8.JPG" alt="photo" width="500"/>
 <br/><br/>
 
 # Scrambling

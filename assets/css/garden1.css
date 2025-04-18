@@ -198,7 +198,7 @@ html {
 /* === HOMEPAGE === */
 
 .graphic.peacock {
-  background-image: url('/assets/collection/garden/5.gif');
+  background-image: url('../collection/garden/5.gif');
   width: 257px;
   height: 180px;
   top: 60%;
@@ -208,7 +208,7 @@ html {
 }
 
 .graphic.eden {
-  background-image: url('/assets/collection/garden/eden.png');
+  background-image: url('../collection/garden/eden.png');
   width: 403px;
   height: 110px;
   top: 31.5%;
