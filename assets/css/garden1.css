@@ -44,7 +44,7 @@ html {
   position: relative;
   overflow: visible;
   background-color: #91b236;
-  background-image: url('/assets/collection/garden/bg.png');
+  background-image: url('../collection/garden/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
@@ -106,7 +106,7 @@ html {
   position: relative;
   overflow: visible;
   background-color: #eaeaea;
-  background-image: url('/assets/collection/goals/bg.png');
+  background-image: url('../collection/goals/bg.png');
   background-repeat: repeat;
   background-size: auto;
   background-position: top left;
@@ -203,6 +203,7 @@ html {
   height: 180px;
   top: 60%;
   left: 50%;
+  
   transform: translateX(-50%);
   z-index: 10;
 }
@@ -219,7 +220,7 @@ html {
 
 .graphic.yellow-left,
 .graphic.yellow-right {
-  background-image: url('/assets/collection/garden/sprite30.png');
+  background-image: url('../collection/garden/sprite30.png');
   background-repeat: no-repeat;
   background-size: auto;
   width: 298px;
@@ -243,7 +244,7 @@ html {
 }
 
 .graphic.pinkside1 {
-  background-image: url('/assets/collection/garden/flower625.gif');
+  background-image: url('../collection/garden/flower625.gif');
   width: 135px;
   height: 450px;
   top: 50%;
@@ -253,7 +254,7 @@ html {
 }
 
 .graphic.pinkside2 {
-  background-image: url('/assets/collection/garden/flower625.gif');
+  background-image: url('../collection/garden/flower625.gif');
   width: 135px;
   height: 450px;
   top: 50%;
@@ -263,7 +264,7 @@ html {
 }
 
 .graphic.tree1 {
-  background-image: url('/assets/collection/garden/tree18.gif');
+  background-image: url('../collection/garden/tree18.gif');
   width: 408px;
   height: 457.5px;
   top: -1%;
@@ -273,7 +274,7 @@ html {
 }
 
 .graphic.tree2 {
-  background-image: url('/assets/collection/garden/tree18.gif');
+  background-image: url('../collection/garden/tree18.gif');
   width: 408px;
   height: 457.5px;
   top: -1%;
@@ -283,7 +284,7 @@ html {
 }
 
 .graphic.redroses1 {
-  background-image: url('/assets/collection/garden/flower473.gif');
+  background-image: url('../collection/garden/flower473.gif');
   width: 245px;
   height: 312px;
   top: 6%;
@@ -293,7 +294,7 @@ html {
 }
 
 .graphic.redroses2 {
-  background-image: url('/assets/collection/garden/flower473.gif');
+  background-image: url('../collection/garden/flower473.gif');
   width: 245px;
   height: 312px;
   top: 6%;
@@ -303,7 +304,7 @@ html {
 }
 
 .graphic.horizontalflowers {
-  background-image: url('/assets/collection/garden/25.png');
+  background-image: url('../collection/garden/25.png');
   width: 513px;
   height: 40px;
   top: 22%;
@@ -313,7 +314,7 @@ html {
 }
 
 .graphic.topflowers {
-  background-image: url('/assets/collection/garden/topflowers.png');
+  background-image: url('../collection/garden/topflowers.png');
   width: 525px;
   height: 112.5px;
   top: 16.3%;
@@ -323,7 +324,7 @@ html {
 }
 
 .graphic.kidonpetal {
-  background-image: url('/assets/collection/garden/elf3.gif');
+  background-image: url('../collection/garden/elf3.gif');
   width: 203.5px;
   height: 203.5px;
   top: 40%;
@@ -333,7 +334,7 @@ html {
 }
 
 .graphic.words {
-  background-image: url('/assets/collection/garden/adigitalgarden.png');
+  background-image: url('../collection/garden/adigitalgarden.png');
   width: 253px;
   height: 100.5px;
   top: 47%;
@@ -343,7 +344,7 @@ html {
 }
 
 .graphic.divider {
-  background-image: url('/assets/collection/garden/4.png');
+  background-image: url('../collection/garden/4.png');
   width: 450px;
   height: 23px;
   top: 40%;
@@ -353,7 +354,7 @@ html {
 }
 
 .graphic.flower183 {
-  background-image: url('/assets/collection/garden/flower183.gif');
+  background-image: url('../collection/garden/flower183.gif');
   width: 180px;
   height: 115px;
   top: 40%;
@@ -363,7 +364,7 @@ html {
 }
 
 .graphic.horizontalflowers2 {
-  background-image: url('/assets/collection/garden/25.png');
+  background-image: url('../collection/garden/25.png');
   width: 513px;
   height: 40px;
   top: 53%;
@@ -374,7 +375,7 @@ html {
 
 
 .graphic.daisydaisy1 {
-  background-image: url('/assets/collection/garden/4.gif');
+  background-image: url('../collection/garden/4.gif');
   width: 375px;
   height: 95px;
   top: 56%;
@@ -384,7 +385,7 @@ html {
 }
 
 .graphic.daisydaisy2 {
-  background-image: url('/assets/collection/garden/3.gif');
+  background-image: url('../collection/garden/3.gif');
   width: 375px;
   height: 95px;
   top: 56%;
@@ -394,7 +395,7 @@ html {
 }
 
 .graphic.left-spinny1 {
-  background-image: url('/assets/collection/garden/93.gif');
+  background-image: url('../collection/garden/93.gif');
   width: 130px;
   height: 130px;
   top: 49%;
@@ -404,7 +405,7 @@ html {
 }
 
 .graphic.left-spinny2 {
-  background-image: url('/assets/collection/garden/93.gif');
+  background-image: url('../collection/garden/93.gif');
   width: 130px;
   height: 130px;
   top: 49%;
@@ -414,7 +415,7 @@ html {
 }
 
 .graphic.left-spinny3 {
-  background-image: url('/assets/collection/garden/93.gif');
+  background-image: url('../collection/garden/93.gif');
   width: 130px;
   height: 130px;
   top: 49%;
@@ -424,7 +425,7 @@ html {
 }
 
 .graphic.left-spinny4 {
-  background-image: url('/assets/collection/garden/93.gif');
+  background-image: url('../collection/garden/93.gif');
   width: 130px;
   height: 130px;
   top: 49%;
@@ -434,7 +435,7 @@ html {
 }
 
 .graphic.left-spinny5 {
-  background-image: url('/assets/collection/garden/93.gif');
+  background-image: url('../collection/garden/93.gif');
   width: 130px;
   height: 130px;
   top: 49%;
@@ -444,7 +445,7 @@ html {
 }
 
 .graphic.right-spinny1 {
-  background-image: url('/assets/collection/garden/97.gif');
+  background-image: url('../collection/garden/97.gif');
   width: 130px;
   height: 130px;
   top: 49%;
@@ -454,7 +455,7 @@ html {
 }
 
 .graphic.right-spinny2 {
-  background-image: url('/assets/collection/garden/97.gif');
+  background-image: url('../collection/garden/97.gif');
   width: 130px;
   height: 130px;
   top: 49%;
@@ -464,7 +465,7 @@ html {
 }
 
 .graphic.right-spinny3 {
-  background-image: url('/assets/collection/garden/97.gif');
+  background-image: url('../collection/garden/97.gif');
   width: 130px;
   height: 130px;
   top: 49%;
@@ -474,7 +475,7 @@ html {
 }
 
 .graphic.right-spinny4 {
-  background-image: url('/assets/collection/garden/97.gif');
+  background-image: url('../collection/garden/97.gif');
   width: 130px;
   height: 130px;
   top: 49%;
@@ -484,7 +485,7 @@ html {
 }
 
 .graphic.right-spinny5 {
-  background-image: url('/assets/collection/garden/97.gif');
+  background-image: url('../collection/garden/97.gif');
   width: 130px;
   height: 130px;
   top: 49%;
@@ -494,7 +495,7 @@ html {
 }
 
 .graphic.sculpture {
-  background-image: url('/assets/collection/garden/statue.gif');
+  background-image: url('../collection/garden/statue.gif');
   width: 195px;
   height: 312px;
   top: 80%;
@@ -504,7 +505,7 @@ html {
 }
 
 .graphic.flowerlady {
-  background-image: url('/assets/collection/garden/wosibflower.gif');
+  background-image: url('../collection/garden/wosibflower.gif');
   width: 259px;
   height: 325px;
   top:34%;
@@ -516,7 +517,7 @@ html {
 /* === BETWEEN === */
 
 .graphic.sunshine {
-background-image: url('/assets//collection/between/b243e74760b865e65015344ecf37d021_w200.gif');
+background-image: url('../collection/between/b243e74760b865e65015344ecf37d021_w200.gif');
 width: 200px;
 height: 207px;
 top: -15%;
@@ -526,7 +527,7 @@ z-index: 40;
 }
 
 .graphic.allflowers {
-background-image: url('/assets/collection/garden/allflowers.png');
+background-image: url('../collection/garden/allflowers.png');
 width: 1755px;
 height: 253px;
 top: -10%;
@@ -536,7 +537,7 @@ z-index: 15;
 }
 
 .graphic.roseribbon {
-background-image: url('/assets/collection/between/55.png');
+background-image: url('../collection/between/55.png');
 height: 42px;
 top: 45px;
 left: 0%;
@@ -552,7 +553,7 @@ z-index: 16;
 /* === OUTDOORS === */
 
 .graphic.campsiteback {
-  background-image: url('/assets/collection/outdoors/campsiteback.png');
+  background-image: url('../collection/outdoors/campsiteback.png');
   width: 614px;
   height: 351px;
   bottom: 0%;
@@ -562,7 +563,7 @@ z-index: 16;
 }
 
 .graphic.longtrees {
-  background-image: url('/assets/collection/outdoors/long-trees.png');
+  background-image: url('../collection/outdoors/long-trees.png');
   width: 927px;
   height: 464px;
   top: 25%;
@@ -572,7 +573,7 @@ z-index: 16;
 }
 
 .graphic.darklake {
-  background-image: url('/assets/collection/outdoors/lake.png');
+  background-image: url('../collection/outdoors/lake.png');
   width: 846px;
   height: 568px;
   right: 0%;
@@ -581,7 +582,7 @@ z-index: 16;
 }
 
 .graphic.campsite {
-  background-image: url('/assets/collection/outdoors/campsite.png');
+  background-image: url('../collection/outdoors/campsite.png');
   width: 581px;
   height: 450px;
   left: 0%;
@@ -590,7 +591,7 @@ z-index: 16;
 }
 
 .graphic.darktree1 {
-  background-image: url('/assets/collection/outdoors/pinetreedark.png');
+  background-image: url('../collection/outdoors/pinetreedark.png');
   width: 160px;
   height: 250px;
   left: 17%;
@@ -599,7 +600,7 @@ z-index: 16;
 }
 
 .graphic.darktree2 {
-  background-image: url('/assets/collection/outdoors/pinetreedark.png');
+  background-image: url('../collection/outdoors/pinetreedark.png');
   width: 320px;
   height: 500px;
   left: 32%;
@@ -608,7 +609,7 @@ z-index: 16;
 }
 
 .graphic.colorado1 {
-  background-image: url('/assets/collection/outdoors/colorado1.gif');
+  background-image: url('../collection/outdoors/colorado1.gif');
   width: 68px;
   height: 50px;
   left: 11.4%;
@@ -617,7 +618,7 @@ z-index: 16;
 }
 
 .graphic.moon {
-  background-image: url('/assets/collection/outdoors/moon.gif');
+  background-image: url('../collection/outdoors/moon.gif');
   width: 220px;
   height: 220px;
   left: 90%;
@@ -630,7 +631,7 @@ z-index: 16;
 /* === TRAVEL === */
 
 .graphic.earth {
-  background-image: url('/assets/collection/travel/earth.webp');
+  background-image: url('../collection/travel/earth.webp');
   width: 400px;
   height: 400px;
   left: 75%;
@@ -642,7 +643,7 @@ z-index: 16;
 
 /* === GOALS === */
 .graphic.rocket-ship {
-  background-image: url('/assets/collection/goals/rocket.png');
+  background-image: url('../collection/goals/rocket.png');
   width: 328.5px;
   height: 589.5px;
   right: 1%;
@@ -651,7 +652,7 @@ z-index: 16;
 }
 
 .graphic.ribbon4 {
-  background-image: url('/assets/collection/goals/37.png');
+  background-image: url('../collection/goals/37.png');
   width: 100%;
   height: 137px;
   left: 0%;
@@ -663,7 +664,7 @@ z-index: 16;
 }
 
 .graphic.ribbonbrickL {
-  background-image: url('/assets/collection/goals/36.png');
+  background-image: url('../collection/goals/36.png');
   background-size: auto;
   width: 23%;
   height: 237px;
@@ -676,7 +677,7 @@ z-index: 16;
 }
 
 .graphic.ribbonbrickR {
-  background-image: url('/assets/collection/goals/36.png');
+  background-image: url('../collection/goals/36.png');
   background-size: auto;
   width: 23%;
   height: 237px;
@@ -689,7 +690,7 @@ z-index: 16;
 }
 
 .graphic.man {
-  background-image: url('/assets/collection/goals/statue11.gif');
+  background-image: url('../collection/goals/statue11.gif');
   width: 500px;
   height: 750px;
   left: 45%;
@@ -703,7 +704,7 @@ z-index: 16;
 }
 
 .graphic.goalstext {
-  background-image: url('/assets/collection/goals/goals.png');
+  background-image: url('../collection/goals/goals.png');
   width: 299px;
   height: 166px;
   left: 2%;
@@ -713,7 +714,7 @@ z-index: 16;
 }
 
 .graphic.tree-l {
-  background-image: url('/assets/collection/goals/treee.gif');
+  background-image: url('../collection/goals/treee.gif');
   width: 438.75px;
   height: 625px;
   left: 33.8%;
@@ -723,7 +724,7 @@ z-index: 16;
 }
 
 .graphic.tree-r {
-  background-image: url('/assets/collection/goals/treee.gif');
+  background-image: url('../collection/goals/treee.gif');
   width: 438.75px;
   height: 625px;
   left: 65%;
@@ -733,7 +734,7 @@ z-index: 16;
 }
 
 .graphic.angellady {
-  background-image: url('/assets/collection/goals/angellady.gif');
+  background-image: url('../collection/goals/angellady.gif');
   width: 285.75px;
   height: 450px;
   left: 10%;
@@ -744,7 +745,7 @@ z-index: 16;
 
 
 .graphic.babyangel {
-  background-image: url('/assets/collection/goals/babyangel.gif');
+  background-image: url('../collection/goals/babyangel.gif');
   width: 360px;
   height: 362px;
   left: 86%;
@@ -755,7 +756,7 @@ z-index: 16;
 
 
 .graphic.sidefountain {
-  background-image: url('/assets/collection/goals/fountain3.gif');
+  background-image: url('../collection/goals/fountain3.gif');
   width: 326px;
   height: 500px;
   left: 2.5%;
@@ -765,7 +766,7 @@ z-index: 16;
 }
 
 .graphic.pajaros {
-  background-image: url('/assets/collection/goals/pajaros.gif');
+  background-image: url('../collection/goals/pajaros.gif');
   width: 295.8px;
   height: 390px;
   left: 95%;
@@ -775,7 +776,7 @@ z-index: 16;
 }
 
 .graphic.column-l {
-  background-image: url('/assets/collection/goals/picmix.gif');
+  background-image: url('../collection/goals/picmix.gif');
   width: 195px;
   height: 338px;
   left: 41%;
@@ -785,7 +786,7 @@ z-index: 16;
 }
 
 .graphic.column-r {
-  background-image: url('/assets/collection/goals/picmix.gif');
+  background-image: url('../collection/goals/picmix.gif');
   width: 195px;
   height: 338px;
   left: 60%;
@@ -795,7 +796,7 @@ z-index: 16;
 }
 
 .graphic.torch-l {
-  background-image: url('/assets/collection/goals/torch2.webp');
+  background-image: url('../collection/goals/torch2.webp');
   width: 89.375px;
   height: 176px;
   left: 39.1%;
@@ -805,7 +806,7 @@ z-index: 16;
 }
 
 .graphic.torch-r {
-  background-image: url('/assets/collection/goals/torch2.webp');
+  background-image: url('../collection/goals/torch2.webp');
   width: 89.375px;
   height: 176px;
   left: 58%;
@@ -815,7 +816,7 @@ z-index: 16;
 }
 
 .graphic.brain {
-  background-image: url('/assets/collection/goals/brain.gif');
+  background-image: url('../collection/goals/brain.gif');
   width: 110.5px;
   height: 83px;
   left: 68%;
@@ -825,7 +826,7 @@ z-index: 16;
 }
 
 .graphic.dove {
-  background-image: url('/assets/collection/goals/dove.gif');
+  background-image: url('../collection/goals/dove.gif');
   width: 134px;
   height: 99px;
   left: 73%;
