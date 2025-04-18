@@ -6,10 +6,16 @@ body {
 }
 
 .navbar {
-    background-color: #ffffff;
     width: 100%;
     padding: 10px 0;
 }
+
+.navbar {
+    position: relative;
+    z-index: 1000000;
+    width: 100%;
+    padding: 10px 0;
+  }
 
 .navbar-container {
     max-width: 1200px;
@@ -59,7 +65,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     min-width: 200px;
-    width: auto
+    width: auto;
     z-index: 10000;
     opacity: 0;
     transition: opacity 5s ease, transform 5s ease;

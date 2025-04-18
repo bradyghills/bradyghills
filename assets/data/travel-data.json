@@ -1,0 +1,38 @@
+[
+  {
+    "title": "ITALY",
+    "start_date": "2024-06-11",
+    "end_date": "2024-06-24",
+    "cities": ["Rome", "Florence", "Venice"],
+    "state": "",
+    "country": "Italy",
+    "continent": "Europe",
+    "coordinates": [[41.8902, 12.4922], [43.7696, 11.2558], [45.4408, 12.3155]],
+    "image": "/assets/media/travel/rome.jpg",
+    "markdown": "/travel-logs/rome/"
+  },
+  {
+    "title": "PUERTO RICO",
+    "start_date": "2025-03-15",
+    "end_date": "2025-03-20",
+    "cities": ["San Juan"],
+    "state": "",
+    "country": "United States",
+    "continent": "North America",
+    "coordinates": [18.4655, -66.1057],
+    "image": "/assets/media/travel/PR2.jpg",
+    "markdown": "/travel-logs/puertorico/"
+  },
+  {
+    "title": "HAWAII",
+    "start_date": "2025-01-05",
+    "end_date": "2025-01-12",
+    "cities": ["Honolulu", "Maui"],
+    "state": "Hawaii",
+    "country": "United States",
+    "continent": "North America",
+    "coordinates": [21.3069, -157.8583],
+    "image": "/assets/media/travel/PR1.jpg",
+    "markdown": "/travel-logs/hawaii/"
+  }
+]

@@ -1,4 +1,43 @@
 ---
 layout: default
-title: about
+title: About
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
+    <script src="{{ '/assets/js/about.js' | relative_url }}" defer></script>
+</head>
+<body>
+    <!-- Title Section -->
+    <section class="title-section">
+        <h1>ABOUT</h1>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <blockquote>
+            Brayden Hill
+        </blockquote>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+            <img src="{{ '/assets/media/random/mirror.jpg' | relative_url }}" alt="Placeholder Image">
+        </div>
+        <div class="content">
+            <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Nulla porttitor accumsan tincidunt.</p>
+            <img src="{{ '/assets/media/random/brothers.jpg' | relative_url }}" alt="Placeholder Image">
+        </div>
+        <div class="content">
+            <p>Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat.</p>
+            <img src="{{ '/assets/media/random/pasta.jpg' | relative_url }}" alt="Placeholder Image">
+        </div>
+    </section>
+</body>
+</html>

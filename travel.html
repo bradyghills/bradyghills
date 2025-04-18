@@ -2,34 +2,94 @@
 layout: default
 title: Travel
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Adventures</title>
+    <link rel="stylesheet" href="{{ '/assets/css/travel.css' | relative_url }}">
+    <script src="{{ '/assets/js/travel.js' | relative_url }}" defer></script>
+    <link rel="stylesheet" href="{{ '/assets/leaflet/leaflet.css' | relative_url }}">
+    <script src="{{ '/assets/leaflet/leaflet.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/lightbox2.js' | relative_url }}"></script>
+</head>
+<body>
+    <div class="travel-page">
+        <!-- Header Section -->
+        <header class="travel-header">
+            <h1>experiencing earth</h1>
+            <p>explore my journeys around the world!</p>
+        </header>
 
-<link rel="stylesheet" href="{{ "/assets/css/travel.css" | relative_url }}">
-<link rel="stylesheet" href="{{ "/assets/leaflet/leaflet.css" | relative_url }}">
-<script src="{{ "/assets/leaflet/leaflet.js" | relative_url }}"></script>
-<script src="{{ "/assets/js/travel.js" | relative_url }}" defer></script>
+        <!-- Stats Section -->
+        <section class="travel-stats">
+            <div class="stat">
+                <h2 id="total-trips">0</h2>
+                <p>Total Trips</p>
+            </div>
+            <div class="stat">
+                <h2 id="countries-visited">0</h2>
+                <p>Countries Visited</p>
+            </div>
+            <div class="stat">
+                <h2 id="cities-visited">0</h2>
+                <p>Cities Visited</p>
+            </div>
+            <div class="stat">
+                <h2 id="states-visited">0</h2>
+                <p>States Visited (US)</p>
+            </div>
+            <div class="stat">
+                <h2 id="longest-trip">0</h2>
+                <p>Longest Trip (Days)</p>
+            </div>
+        </section>
 
-<h1 class="page-title">Travel</h1>
+        <!-- Travel Logs Section -->
+        <section class="travel-logs">
+            <h2 class="section-title">Travel Logs</h2>
+            <label for="sort-order">Sort by Date:</label>
+            <select id="sort-order" onchange="sortTravelLogs()">
+                <option value="newest" selected>Newest to Oldest</option>
+                <option value="oldest">Oldest to Newest</option>
+            </select>
+            <div id="travel-logs-grid"></div>
+        </section>
 
-<div class="file-cabinet">
-  <h2>Travel Logs</h2>
-  <div class="file-cabinet-logs">
-    {% for log in site.data.travel-logs %}
-    <div class="file-cabinet-log">
-      <h3>{{ log.title }}</h3>
-      <p>{{ log.date | date: "%B %d, %Y" }}</p>
-      <p>{{ log.excerpt }}</p>
-      <a href="{{ log.url }}">Read More</a>
+        <!-- Map Section -->
+        <section class="travel-map">
+            <h2>Interactive Map</h2>
+            <div id="map"></div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="photo-gallery">
+            <h2>Photo Gallery</h2>
+            <div id="gallery-grid"></div>
+        </section>
     </div>
-    {% endfor %}
-  </div>
-</div>
+    <script>
+        function sortTravelLogs() {
+            const sortOrder = document.getElementById('sort-order').value;
+            console.log("Sort Order:", sortOrder);
 
-<div id="map" class="map-section"></div>
+            const sortedData = [...travelData].sort((a, b) => {
+                const dateA = new Date(a.start_date);
+                const dateB = new Date(b.start_date);
 
-<div class="bucket-list">
-  <h2>Bucket List</h2>
-  <p>Places I want to visit:</p>
-  <ul>
-    <!-- Empty for now -->
-  </ul>
-</div>
+                if (sortOrder === 'newest') {
+                    return dateB - dateA;
+                } else {
+                    return dateA - dateB;
+                }
+            });
+
+            console.log("Sorted Data:", sortedData);
+
+            generateTravelLogs(sortedData);
+        }
+    </script>
+</body>
+</html>

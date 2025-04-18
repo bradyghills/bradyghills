@@ -1,0 +1,146 @@
+/* ===================================
+   Eden Radio – retro/geocities vibes
+   =================================== */
+
+   :root {
+    --primary: #f9efe4;
+    --accent:  #00ff99;
+  }
+  
+  .music-player {
+    position: fixed; /* Fix the player relative to the viewport */
+    bottom: 0;       /* Align the bottom of the player with the bottom of the screen */
+    right: 0;         /* Align the left of the player with the left of the screen */
+    width: 320px;
+    height: auto;
+    max-height: 150px;
+    background: var(--primary);
+    border: 2px solid #000;
+    box-shadow:
+      inset -1px -1px 0 #fff,
+      inset 1px 1px 0 #000,
+      4px 4px 0 #000;
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    font-size: 10px;
+    z-index: 9999;
+    user-select: none;
+    transition: height 0.3s ease; /* Smooth transition for minimization */
+  }
+  
+  .player-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 8px;
+    background: var(--accent);
+    color: #000;
+    cursor: move;
+  }
+  
+  .player-title {
+    pointer-events: none;
+  }
+  
+  .control-btn {
+    background: var(--primary);
+    border: 1px solid #000;
+    padding: 4px 6px;
+    margin: 2px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  
+  .control-btn:active {
+    box-shadow: inset 1px 1px 0 #000;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+  }
+  
+  .track-marquee {
+    display: block;
+    padding: 4px 8px;
+    background: #000;
+    color: var(--accent);
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .track-marquee.paused {
+    animation: none; /* Disable scrolling */
+    overflow: hidden; /* Prevent scrolling behavior */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  
+  .player-body {
+    padding: 8px;
+  }
+  
+  .minimized {
+    height: 40px; /* Only show the header when minimized */
+    overflow: hidden; /* Hide everything else */
+  }
+  
+  .minimized .player-body {
+    display: none; /* Hide the body when minimized */
+  }
+
+  /* Equalizer Styles */
+  .equalizer {
+    display: flex;
+    gap: 2px; /* Small gap between bars */
+    align-items: flex-end; /* Align bars to the bottom */
+    height: 20px; /* Height of the equalizer container */
+  }
+
+  .equalizer-bar {
+    width: 4px; /* Narrow bars for a pixel-like look */
+    height: 100%; /* Default height */
+    background-color: #ff8c00; 
+    animation: equalizer-animation 1s infinite ease-in-out;
+    animation-play-state: paused; /* Start paused */
+  }
+
+  .equalizer-bar:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .equalizer-bar:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .equalizer-bar:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  .equalizer-bar:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+
+  .equalizer-bar:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+
+  /* Equalizer Animation */
+  @keyframes equalizer-animation {
+    0%, 100% {
+      transform: scaleY(0.3); /* Bars shrink */
+    }
+    50% {
+      transform: scaleY(1); /* Bars grow */
+    }
+  }
+
+  .time-display {
+    text-align: center;
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    font-size: 10px;
+    color: #000000;
+    margin-top: 8px;
+  }

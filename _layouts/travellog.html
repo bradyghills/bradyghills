@@ -1,0 +1,62 @@
+---
+layout: default
+title: Travel Log
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.excerpt | strip_html | default: site.description }}">
+    <meta name="keywords" content="travel log, adventure, {{ page.location }}">
+    <meta name="author" content="{{ site.author }}">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/travellog.css' | relative_url }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="travellog-header" style="background-image: url('{{ page.titleimage | relative_url }}');">
+        <div class="overlay">
+            <h1 class="travellog-title">{{ page.title }}</h1>
+            <p class="travellog-meta">
+                <span class="travellog-date">{{ page.date | date: "%B %d, %Y" }}</span> | 
+                <span class="travellog-location">{{ page.location }}</span>
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="travellog-content">
+        <article>
+            {{ content }}
+        </article>
+
+        <!-- Photo Gallery Section -->
+        {% if page.images %}
+        <section class="travellog-gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-container">
+                <button class="carousel-arrow left-arrow">&lt;</button>
+                <div class="gallery-grid">
+                    {% for image in page.images %}
+                    <div class="gallery-item">
+                        <img src="{{ image | relative_url }}" alt="Gallery image from {{ page.title }}">
+                    </div>
+                    {% endfor %}
+                </div>
+                <button class="carousel-arrow right-arrow">&gt;</button>
+            </div>
+        </section>
+        {% endif %}
+    </main>
+
+    <!-- Carousel Script -->
+    <script src="{{ '/assets/js/carousel.js' | relative_url }}"></script>
+
+    <!-- Lightbox for Image Expansion -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-image" src="" alt="Expanded image">
+    </div>
+</body>
+</html>

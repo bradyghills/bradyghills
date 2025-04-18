@@ -80,6 +80,45 @@ h4 {
     color: #000000;
 }
 
+/* List Styles */
+ul, ol {
+    margin: 20px 0; /* Add spacing above and below lists */
+    padding-left: 40px; /* Indent the list items */
+    line-height: 1.6; /* Improve readability with increased line height */
+}
+
+ul li, ol li {
+    margin-bottom: 10px; /* Add spacing between list items */
+    font-size: 1rem; /* Set a consistent font size */
+    color: #333; /* Use a dark gray color for text */
+}
+
+ul li::marker {
+    color: #0044cc; /* Use a blue color for bullet points */
+    font-size: 1.2rem; /* Slightly larger bullet points */
+}
+
+ol li {
+    counter-increment: list-counter; /* Increment the counter for ordered lists */
+}
+
+ol li::marker {
+    color: #0044cc; /* Use a blue color for numbers */
+    font-size: 1.2rem; /* Slightly larger numbers */
+    font-weight: bold; /* Make numbers bold */
+}
+
+/* Nested Lists */
+ul ul, ol ol {
+    margin-top: 10px; /* Add spacing above nested lists */
+    margin-bottom: 10px; /* Add spacing below nested lists */
+    padding-left: 20px; /* Indent nested lists further */
+}
+
+ul ul li::marker, ol ol li::marker {
+    color: #007700; /* Use a green color for nested list markers */
+}
+
 /* Gallery Section */
 .triplog-gallery {
     margin-top: 20px;

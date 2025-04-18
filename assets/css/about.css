@@ -1,0 +1,132 @@
+/* General Reset */
+body, h1, p, blockquote, div, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Title Section */
+.title-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    background: url('/assets/media/random/coldwater.jpg') no-repeat center center/cover;
+    overflow: hidden;
+    margin-bottom: 0; /* Remove any spacing below the title section */
+}
+
+.title-section::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.title-section h1 {
+    position: r; /* Ensure the title is positioned relative to the section */
+    text-align: center;
+    font-size: 11rem; /* Very large font size */
+    color: #f0f0f0; /* Bright color for contrast */
+    background: rgba(1, 8, 145, 0.9); /* Semi-transparent background for readability */
+    z-index: 2; /* Ensure the title is above the overlay */
+    padding: 10px 20px;
+    line-height: 1; /* Prevent extra spacing between letters */
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width of the page */
+    background: #002a7e; /* Blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0; /* Remove any spacing between sections */
+}
+
+.hero-section blockquote {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #ffffff;
+    margin: 0 auto;
+    max-width: 800px;
+    position: relative;
+}
+
+/* Content Section */
+.content-section {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: grid;
+    gap: 40px;
+}
+
+.content {
+    display: block;
+    align-items: left;
+    gap: 20px;
+    width: 100%;
+}
+
+.content:nth-child(odd) {
+    flex-direction: grid; /* Image on the left, text on the right */
+}
+
+.content:nth-child(even) {
+    flex-direction: row-reverse; /* Image on the right, text on the left */
+}
+
+.content img {
+    width: 40%; /* Make images smaller for better text flow */
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content img:hover {
+    transform: scale(.95);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content p {
+    flex: 1; /* Allow text to take up remaining space */
+    font-size: 1.2rem;
+    color: #555;
+    text-align: justify; /* Justify text for a clean reading experience */
+    max-width: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section blockquote {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        flex-direction: column; /* Stack text and image vertically on smaller screens */
+    }
+
+    .content img {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .content p {
+        text-align: center; /* Center text on smaller screens */
+    }
+}

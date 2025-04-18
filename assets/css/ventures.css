@@ -7,7 +7,6 @@ body, div {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #110843, #001882); /* Gradient background */
     overflow-x: hidden;
 }
 
@@ -63,7 +62,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
@@ -100,24 +98,24 @@ body {
 
 /* Navbar Links - Default State */
 .navbar a {
-    color: rgb(255, 255, 255); /* Default color for all navbar links */
+    color: rgb(0, 0, 0); /* Default color for all navbar links */
     transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .navbar-menu a:hover,
 .navbar-menu .dropdown:hover > a {
-    color: rgb(0, 36, 168);
+    color: rgb(40, 40, 40);
 }
 
 /* Ventures Page Specific Styling */
 .navbar a[href*="ventures.html"] {
-    color: rgb(30, 0, 255); /* Red color for the Ventures link */
+    color: rgb(0, 0, 0); /* Red color for the Ventures link */
     font-weight: bold; /* Make it stand out */
 }
 
 /* Ventures Link Hover State */
 .navbar a[href*="ventures.html"]:hover {
-    color: rgb(255, 255, 255); /* Keep it red on hover */
+    color: rgb(235, 235, 235); /* Keep it red on hover */
 }
 
 /* Header Section */
@@ -130,7 +128,7 @@ body {
 
 .ventures-header h1 {
     font-size: 1.0rem; /* Large font size */
-    color: #fff; /* White text */
+    color: #000000; /* White text */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a subtle shadow for contrast */
     line-height: 1.5; /* Improve readability */
 }

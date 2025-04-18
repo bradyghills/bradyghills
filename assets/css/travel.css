@@ -1,79 +1,259 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f0f0f0;
+/* General Reset */
+
+.travel-page {
+  max-width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+body, h1, h2, p, div {
     margin: 0;
     padding: 0;
-  }
-  
-  .page-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
     color: #333;
-  }
-  
-  .file-cabinet {
-    background: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .file-cabinet h2 {
+}
+
+/* Header Section */
+.travel-header {
     text-align: center;
-    font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .file-cabinet-logs {
+}
+
+.travel-header h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #001f3f;
+    background: linear-gradient(45deg, #004386, #000583); /* Navy blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3em;
+    padding: 10px;
+    border: 10px solid #160091; /* Match the border to the gradient */
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+.travel-header p {
+    font-size: 1.2rem;
+}
+
+/* Stats Section */
+.travel-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background: #effffd;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h2 {
+    font-size: 2rem;
+    color: #0044cc;
+}
+
+/* Map Section */
+.travel-map {
+    padding: 20px;
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Travel Logs Section */
+.travel-logs {
+    padding: 20px;
+}
+
+#travel-logs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Increased gap for better spacing */
+}
+
+.travel-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* White background for a clean look */
+}
+
+.travel-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.travel-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.travel-card img {
+    width: 100%;
+    height: 300px; /* Match the taller thumbnail size from outdoors.css */
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+}
+
+.travel-card .card-content {
+    padding: 20px; /* Increased padding for better spacing */
+    text-align: left; /* Align text to the left for a cleaner layout */
+}
+
+.travel-card .card-content h3 {
+    font-size: 1.8rem; /* Larger font size for the title */
+    font-weight: bold;
+    color: #16078f; /* Dark green color for the title */
+    margin-bottom: 10px;
+}
+
+.travel-card .card-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555; /* Subtle gray for supporting text */
+}
+
+.travel-card .card-content .travel-date {
+    font-size: 0.9rem;
+    color: #666; /* Lighter gray for the date */
+    margin-top: 10px;
+}
+
+/* Photo Gallery Section */
+.photo-gallery {
+    padding: 20px;
+}
+
+.filters {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Square grid items */
+    grid-auto-rows: 150px; /* Base row height */
+    gap: 5px; /* Small gap between images */
+    width: 100%;
+    margin-bottom: 40px; /* Add margin to prevent overlap with the next section */
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 0; /* Remove extra space around images */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fill their container without awkward cropping */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Lightbox Styles */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95); /* Darker background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-  }
-  
-  .file-cabinet-log {
-    background: #f8f8f8;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .file-cabinet-log h3 {
-    margin-top: 0;
-    color: #333;
-  }
-  
-  .file-cabinet-log p {
-    margin: 10px 0;
-    color: #666;
-  }
-  
-  .file-cabinet-log a {
-    text-decoration: none;
-    color: #007bff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 70%;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.lightbox-details {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.lightbox-details p {
+    margin: 5px 0;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Section Title with Line */
+.section-title {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #0044cc; /* Blue line under the title */
+    font-size: 1.8rem;
     font-weight: bold;
-  }
-  
-  .map-section {
-    height: 500px;
-    margin: 20px 0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .bucket-list {
-    background: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .bucket-list h2 {
-    margin-top: 0;
-  }
+    color: #0044cc;
+}
+
+/* Sort Dropdown */
+#sort-order {
+    font-size: 0.9em;
+    padding: 5px;
+    border: 1px solid #e8e8e8;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    background-color: #fefefe;
+    color: #333;
+}

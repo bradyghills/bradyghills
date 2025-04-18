@@ -1,0 +1,863 @@
+/* ================================
+   1. General Page Setup
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.eden-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  overflow-x: hidden;
+
+}
+
+/* ================================
+   2. Navbar Layer (Always on Top)
+================================ */
+
+.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* ================================
+   5. Individual Scroll Sections (Custom Backgrounds)
+================================ */
+
+.eden-homepage {
+  width: 100vw;
+  height: 135vh;
+  position: relative;
+  overflow: visible;
+  background-color: #91b236;
+  background-image: url('/assets/collection/garden/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.eden-between {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: visible;
+  background-color: #590b66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.eden-intro-text {
+  max-width: 700px;
+  z-index: 10000;
+}
+
+.eden-intro-text h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.eden-intro-text p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.eden-outdoors {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: visible;
+  background-color: #212148;
+  z-index: 1;
+}
+
+.eden-travel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: visible;
+  background-color: #c8ecff;
+  z-index: 1;
+}
+
+.eden-goals {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: visible;
+  background-color: #eaeaea;
+  background-image: url('/assets/collection/goals/bg.png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
+  z-index: 1;
+}
+
+.eden-drawings {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #fdf3f9;
+  z-index: 1;
+}
+
+.eden-photography {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #e6f0ff;
+  z-index: 1;
+}
+
+.eden-music {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #ece1f5;
+  z-index: 1;
+}
+
+.eden-video {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  z-index: 1;
+}
+
+.eden-writing {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #f9efe1;
+  z-index: 1;
+}
+
+.eden-about {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #ebf5e1;
+  z-index: 1;
+}
+
+/* ================================
+   6. Base Graphic Style (All Sprites, PNGs, GIFs)
+================================ */
+
+.graphic {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: auto;
+  z-index: 1;
+  transition: transform 0.3s ease;
+
+  /* For pixel art clarity */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* ================================
+   7. Section Specific Graphics Setup
+   (Add your gif placements inside each block below)
+================================ */
+
+/* === FLOATING GRAPHICS === */
+
+/* === HOMEPAGE === */
+
+.graphic.peacock {
+  background-image: url('/assets/collection/garden/5.gif');
+  width: 257px;
+  height: 180px;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.graphic.eden {
+  background-image: url('/assets/collection/garden/eden.png');
+  width: 403px;
+  height: 110px;
+  top: 31.5%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1000;
+}
+
+.graphic.yellow-left,
+.graphic.yellow-right {
+  background-image: url('/assets/collection/garden/sprite30.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 298px;
+  height: 300px;
+  top: 40%;
+  position: absolute;
+}
+
+.graphic.yellow-left {
+  background-position: 0px 0px;
+  left: 5%;
+  transform: translateX(-50%) scaleX(-1);
+  z-index: 12;
+}
+
+.graphic.yellow-right {
+  background-position: -297px 0px;
+  left: 95%;
+  transform: translateX(-50%) scaleX(-1);
+  z-index: 12;
+}
+
+.graphic.pinkside1 {
+  background-image: url('/assets/collection/garden/flower625.gif');
+  width: 135px;
+  height: 450px;
+  top: 50%;
+  left: 98%;
+  transform: translateX(-50%)scaleX(-1);
+  z-index: 16;
+}
+
+.graphic.pinkside2 {
+  background-image: url('/assets/collection/garden/flower625.gif');
+  width: 135px;
+  height: 450px;
+  top: 50%;
+  left: 2%;
+  transform: translateX(-50%);
+  z-index: 16;
+}
+
+.graphic.tree1 {
+  background-image: url('/assets/collection/garden/tree18.gif');
+  width: 408px;
+  height: 457.5px;
+  top: -1%;
+  left: 12%;
+  transform: translateX(-50%);
+  z-index: 6;
+}
+
+.graphic.tree2 {
+  background-image: url('/assets/collection/garden/tree18.gif');
+  width: 408px;
+  height: 457.5px;
+  top: -1%;
+  left: 88%;
+  transform: translateX(-50%) scaleX(-1);
+  z-index: 6;
+}
+
+.graphic.redroses1 {
+  background-image: url('/assets/collection/garden/flower473.gif');
+  width: 245px;
+  height: 312px;
+  top: 6%;
+  left: 70%;
+  transform: translateX(-50%);
+  z-index: 21;
+}
+
+.graphic.redroses2 {
+  background-image: url('/assets/collection/garden/flower473.gif');
+  width: 245px;
+  height: 312px;
+  top: 6%;
+  left: 30%;
+  transform: translateX(-50%) scaleX(-1);
+  z-index: 21;
+}
+
+.graphic.horizontalflowers {
+  background-image: url('/assets/collection/garden/25.png');
+  width: 513px;
+  height: 40px;
+  top: 22%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 8;
+}
+
+.graphic.topflowers {
+  background-image: url('/assets/collection/garden/topflowers.png');
+  width: 525px;
+  height: 112.5px;
+  top: 16.3%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2;
+}
+
+.graphic.kidonpetal {
+  background-image: url('/assets/collection/garden/elf3.gif');
+  width: 203.5px;
+  height: 203.5px;
+  top: 40%;
+  left: 33.5%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 28;
+}
+
+.graphic.words {
+  background-image: url('/assets/collection/garden/adigitalgarden.png');
+  width: 253px;
+  height: 100.5px;
+  top: 47%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 28;
+}
+
+.graphic.divider {
+  background-image: url('/assets/collection/garden/4.png');
+  width: 450px;
+  height: 23px;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 4;
+}
+
+.graphic.flower183 {
+  background-image: url('/assets/collection/garden/flower183.gif');
+  width: 180px;
+  height: 115px;
+  top: 40%;
+  left: 65%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 28;
+}
+
+.graphic.horizontalflowers2 {
+  background-image: url('/assets/collection/garden/25.png');
+  width: 513px;
+  height: 40px;
+  top: 53%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 8;
+}
+
+
+.graphic.daisydaisy1 {
+  background-image: url('/assets/collection/garden/4.gif');
+  width: 375px;
+  height: 95px;
+  top: 56%;
+  left: 20%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 8;
+}
+
+.graphic.daisydaisy2 {
+  background-image: url('/assets/collection/garden/3.gif');
+  width: 375px;
+  height: 95px;
+  top: 56%;
+  left: 80%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 8;
+}
+
+.graphic.left-spinny1 {
+  background-image: url('/assets/collection/garden/93.gif');
+  width: 130px;
+  height: 130px;
+  top: 49%;
+  left: 15%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 7;
+}
+
+.graphic.left-spinny2 {
+  background-image: url('/assets/collection/garden/93.gif');
+  width: 130px;
+  height: 130px;
+  top: 49%;
+  left: 20.5%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 7;
+}
+
+.graphic.left-spinny3 {
+  background-image: url('/assets/collection/garden/93.gif');
+  width: 130px;
+  height: 130px;
+  top: 49%;
+  left: 26%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 7;
+}
+
+.graphic.left-spinny4 {
+  background-image: url('/assets/collection/garden/93.gif');
+  width: 130px;
+  height: 130px;
+  top: 49%;
+  left: 31.5%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 7;
+}
+
+.graphic.left-spinny5 {
+  background-image: url('/assets/collection/garden/93.gif');
+  width: 130px;
+  height: 130px;
+  top: 49%;
+  left: 37%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 7;
+}
+
+.graphic.right-spinny1 {
+  background-image: url('/assets/collection/garden/97.gif');
+  width: 130px;
+  height: 130px;
+  top: 49%;
+  left: 85%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 7;
+}
+
+.graphic.right-spinny2 {
+  background-image: url('/assets/collection/garden/97.gif');
+  width: 130px;
+  height: 130px;
+  top: 49%;
+  left: 79.5%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 7;
+}
+
+.graphic.right-spinny3 {
+  background-image: url('/assets/collection/garden/97.gif');
+  width: 130px;
+  height: 130px;
+  top: 49%;
+  left: 74%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 7;
+}
+
+.graphic.right-spinny4 {
+  background-image: url('/assets/collection/garden/97.gif');
+  width: 130px;
+  height: 130px;
+  top: 49%;
+  left: 68.5%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 7;
+}
+
+.graphic.right-spinny5 {
+  background-image: url('/assets/collection/garden/97.gif');
+  width: 130px;
+  height: 130px;
+  top: 49%;
+  left: 63%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 7;
+}
+
+.graphic.sculpture {
+  background-image: url('/assets/collection/garden/statue.gif');
+  width: 195px;
+  height: 312px;
+  top: 80%;
+  left: 25%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 7;
+}
+
+.graphic.flowerlady {
+  background-image: url('/assets/collection/garden/wosibflower.gif');
+  width: 259px;
+  height: 325px;
+  top:34%;
+  left: 95%;
+  transform: translateX(-50%) translateY(-50%)scaleX(-1);
+  z-index: 7;
+}
+
+/* === BETWEEN === */
+
+.graphic.sunshine {
+background-image: url('/assets//collection/between/b243e74760b865e65015344ecf37d021_w200.gif');
+width: 200px;
+height: 207px;
+top: -15%;
+left: 90%;
+transform: translateX(-50%);
+z-index: 40;
+}
+
+.graphic.allflowers {
+background-image: url('/assets/collection/garden/allflowers.png');
+width: 1755px;
+height: 253px;
+top: -10%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+z-index: 15;
+}
+
+.graphic.roseribbon {
+background-image: url('/assets/collection/between/55.png');
+height: 42px;
+top: 45px;
+left: 0%;
+position: absolute;
+background-repeat: repeat-x;
+background-position: center;
+width: 100%;
+z-index: 16;
+}
+
+/* Add other homepage graphics here */
+
+/* === OUTDOORS === */
+
+.graphic.campsiteback {
+  background-image: url('/assets/collection/outdoors/campsiteback.png');
+  width: 614px;
+  height: 351px;
+  bottom: 0%;
+  left: 0%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.graphic.longtrees {
+  background-image: url('/assets/collection/outdoors/long-trees.png');
+  width: 927px;
+  height: 464px;
+  top: 25%;
+  left: 0%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.graphic.darklake {
+  background-image: url('/assets/collection/outdoors/lake.png');
+  width: 846px;
+  height: 568px;
+  right: 0%;
+  bottom: 0%;
+  z-index: 2;
+}
+
+.graphic.campsite {
+  background-image: url('/assets/collection/outdoors/campsite.png');
+  width: 581px;
+  height: 450px;
+  left: 0%;
+  bottom: 0%;
+  z-index: 5;
+}
+
+.graphic.darktree1 {
+  background-image: url('/assets/collection/outdoors/pinetreedark.png');
+  width: 160px;
+  height: 250px;
+  left: 17%;
+  bottom: 33%;
+  z-index: 4;
+}
+
+.graphic.darktree2 {
+  background-image: url('/assets/collection/outdoors/pinetreedark.png');
+  width: 320px;
+  height: 500px;
+  left: 32%;
+  bottom: 0%;
+  z-index: 9;
+}
+
+.graphic.colorado1 {
+  background-image: url('/assets/collection/outdoors/colorado1.gif');
+  width: 68px;
+  height: 50px;
+  left: 11.4%;
+  bottom: 66.7%;
+  z-index: 9;
+}
+
+.graphic.moon {
+  background-image: url('/assets/collection/outdoors/moon.gif');
+  width: 220px;
+  height: 220px;
+  left: 90%;
+  top: -15%;
+  transform: translateX(-50%);
+  z-index: 40;
+}
+
+
+/* === TRAVEL === */
+
+.graphic.earth {
+  background-image: url('/assets/collection/travel/earth.webp');
+  width: 400px;
+  height: 400px;
+  left: 75%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 40;
+}
+
+
+/* === GOALS === */
+.graphic.rocket-ship {
+  background-image: url('/assets/collection/goals/rocket.png');
+  width: 328.5px;
+  height: 589.5px;
+  right: 1%;
+  top: -200px;
+  z-index: 20;
+}
+
+.graphic.ribbon4 {
+  background-image: url('/assets/collection/goals/37.png');
+  width: 100%;
+  height: 137px;
+  left: 0%;
+  bottom: 0;
+  background-repeat: repeat-x;
+  background-position: center;
+  display: block;
+  z-index: 19;
+}
+
+.graphic.ribbonbrickL {
+  background-image: url('/assets/collection/goals/36.png');
+  background-size: auto;
+  width: 23%;
+  height: 237px;
+  left: 0;
+  bottom: 137px;
+  background-repeat: repeat;
+  background-position: top left;
+  display: block;
+  z-index: 3;
+}
+
+.graphic.ribbonbrickR {
+  background-image: url('/assets/collection/goals/36.png');
+  background-size: auto;
+  width: 23%;
+  height: 237px;
+  right: 0;
+  bottom: 137px;
+  background-repeat: repeat;
+  background-position: top left;
+  display: block;
+  z-index: 3;
+}
+
+.graphic.man {
+  background-image: url('/assets/collection/goals/statue11.gif');
+  width: 500px;
+  height: 750px;
+  left: 45%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  z-index: 20;
+  pointer-events: auto;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+}
+
+.graphic.goalstext {
+  background-image: url('/assets/collection/goals/goals.png');
+  width: 299px;
+  height: 166px;
+  left: 2%;
+  top: 3%;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.graphic.tree-l {
+  background-image: url('/assets/collection/goals/treee.gif');
+  width: 438.75px;
+  height: 625px;
+  left: 33.8%;
+  bottom: -20%;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+.graphic.tree-r {
+  background-image: url('/assets/collection/goals/treee.gif');
+  width: 438.75px;
+  height: 625px;
+  left: 65%;
+  bottom: -20%;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+.graphic.angellady {
+  background-image: url('/assets/collection/goals/angellady.gif');
+  width: 285.75px;
+  height: 450px;
+  left: 10%;
+  bottom: 5%;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+
+.graphic.babyangel {
+  background-image: url('/assets/collection/goals/babyangel.gif');
+  width: 360px;
+  height: 362px;
+  left: 86%;
+  bottom: 5%;
+  z-index: 10;
+  transform: translateX(-50%) scaleX(-1);
+}
+
+
+.graphic.sidefountain {
+  background-image: url('/assets/collection/goals/fountain3.gif');
+  width: 326px;
+  height: 500px;
+  left: 2.5%;
+  bottom: -3%;
+  z-index: 11;
+  transform: translateX(-50%) scaleX(-1);
+}
+
+.graphic.pajaros {
+  background-image: url('/assets/collection/goals/pajaros.gif');
+  width: 295.8px;
+  height: 390px;
+  left: 95%;
+  bottom: 5%;
+  z-index: 12;
+  transform: translateX(-50%);
+}
+
+.graphic.column-l {
+  background-image: url('/assets/collection/goals/picmix.gif');
+  width: 195px;
+  height: 338px;
+  left: 41%;
+  bottom: 40%;
+  z-index: 5;
+  transform: translateX(-50%);
+}
+
+.graphic.column-r {
+  background-image: url('/assets/collection/goals/picmix.gif');
+  width: 195px;
+  height: 338px;
+  left: 60%;
+  bottom: 40%;
+  z-index: 5;
+  transform: translateX(-50%);
+}
+
+.graphic.torch-l {
+  background-image: url('/assets/collection/goals/torch2.webp');
+  width: 89.375px;
+  height: 176px;
+  left: 39.1%;
+  bottom: 73%;
+  z-index: 4;
+  transform: translateX(-50%);
+}
+
+.graphic.torch-r {
+  background-image: url('/assets/collection/goals/torch2.webp');
+  width: 89.375px;
+  height: 176px;
+  left: 58%;
+  bottom: 73%;
+  z-index: 4;
+  transform: translateX(-50%);
+}
+
+.graphic.brain {
+  background-image: url('/assets/collection/goals/brain.gif');
+  width: 110.5px;
+  height: 83px;
+  left: 68%;
+  bottom: 73%;
+  z-index: 5;
+  transform: translateX(-50%);
+}
+
+.graphic.dove {
+  background-image: url('/assets/collection/goals/dove.gif');
+  width: 134px;
+  height: 99px;
+  left: 73%;
+  bottom: 54%;
+  z-index: 10;
+  transform: translateX(-50%) scaleX(-1);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* === DRAWINGS === */
+.eden-drawings .graphic {} /* Add drawings graphics here */
+
+/* === PHOTOGRAPHY === */
+.eden-photography .graphic {} /* Add photography graphics here */
+
+/* === MUSIC === */
+.eden-music .graphic {} /* Add music graphics here */
+
+/* === VIDEO === */
+.eden-video .graphic {} /* Add video graphics here */
+
+/* === WRITING === */
+.eden-writing .graphic {} /* Add writing graphics here */
+
+/* === ABOUT === */
+.eden-about .graphic {} /* Add about me graphics here */

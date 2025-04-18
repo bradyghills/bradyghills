@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eden Radio</title>
+  <link rel="stylesheet" href="assets/css/player.css">
+  <!-- Retro pixel font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 🎵 Floating Music Player -->
+  <div id="music-player" class="music-player">
+    <div class="player-header" id="music-player-header">
+      <span class="player-title">HILL FM</span>
+      <div class="equalizer">
+        <div class="equalizer-bar"></div>
+        <div class="equalizer-bar"></div>
+        <div class="equalizer-bar"></div>
+        <div class="equalizer-bar"></div>
+        <div class="equalizer-bar"></div>
+      </div>
+      <button id="minimize-btn" class="control-btn">_</button>
+    </div>
+
+    <div class="player-body">
+      <div class="controls">
+        <button id="prev-btn" class="control-btn">⏮</button>
+        <button id="play-pause-btn" class="control-btn">▶︎</button>
+        <button id="next-btn" class="control-btn">⏭</button>
+        <button id="mute-btn" class="control-btn">🔈</button>
+      </div>
+
+      <marquee behavior="scroll" direction="left" scrollamount="4" class="track-marquee">
+        🎵 Now Playing: <span id="track-title">Loading…</span>
+      </marquee>
+
+      <!-- Time Display -->
+      <div class="time-display">
+        <span id="current-time">0:00</span> / <span id="total-duration">0:00</span>
+      </div>
+    </div>
+
+    <audio id="audio-player"></audio>
+  </div>
+
+  <script src="assets/js/player.js"></script>
+</body>
+</html>
